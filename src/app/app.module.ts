@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes }from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
+ 
 //import firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase} from 'angularfire2/database-deprecated';
@@ -22,13 +26,15 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
  //service import
 import {ClientService} from './services/client.service';
 import { ClientsComponent } from './components/clients/clients.component';
+import { ClientDetailsComponent } from './components/client-details/client-details.component';
 
 
   const appRoutes: Routes = [
     {path:'', component:DashboardComponent},
     {path:'register', component:RegisterComponent}, 
     {path:'login', component:LoginComponent},
-    {path:'add-client', component:AddClientComponent}
+    {path:'add-client', component:AddClientComponent},
+    {path:'client/:id', component:ClientDetailsComponent }
   ];
   export const firebaseConfig = {
     apiKey: "AIzaSyC4620MLk7z-q8EwPik0Mclp_iarzneDjM",
@@ -50,17 +56,23 @@ import { ClientsComponent } from './components/clients/clients.component';
     RegisterComponent,
     SettingsComponent,
     PageNotFoundComponent,
-    ClientsComponent
+    ClientsComponent,
+    ClientDetailsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    FlashMessagesModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    ClientService 
+    ClientService,
+    FlashMessagesModule
+ 
+     
      
   ],
   bootstrap: [AppComponent]

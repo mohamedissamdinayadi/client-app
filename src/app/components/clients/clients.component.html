@@ -21,7 +21,7 @@
     <td>{{client.firstName}}      {{client.lastName}} </td> 
     <td>{{client.email}}</td>
     <td>{{client.balance | currency:"USD":true}}</td>
-    <td><a href="" class="btn btn-secondary  btn-sm"> <i class="fa fa-arrow-circle-o-right"></i>Detail</a></td>
+    <td><a [routerLink]="['/client/'+client.$key]" href=""  class="btn btn-secondary  btn-sm"> <i class="fa fa-arrow-circle-o-right"></i>Detail</a></td>
   </tr>
 </tbody>
 </table>

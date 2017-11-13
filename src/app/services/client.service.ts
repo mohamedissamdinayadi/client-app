@@ -17,7 +17,17 @@ constructor(
   this.clients = this.af.list('/clients') as FirebaseListObservable<Client[]>;
 }
 
-getClient(){
+getClients(){
   return this.clients;
+}
+newClient(client:Client ){
+  this.clients.push(client);
+}
+
+getClient(id:String){
+  this.client =this.af.object('/clients/'+id)as FirebaseObjectObservable<Client> ;
+  return this.client ;  
+
+   
 }
 }
