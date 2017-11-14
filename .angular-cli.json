@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "clientapp"
+    "name": "clientpanel"
   },
   "apps": [
     {
@@ -21,15 +21,14 @@
       "styles": [
         "styles.css",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-      
-        
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
+
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/tether/dist/js/tether.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js"
-            ],
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -63,9 +62,6 @@
   },
   "defaults": {
     "styleExt": "css",
-    "class": {
-      "spec": false
-    },
     "component": {}
   }
 }

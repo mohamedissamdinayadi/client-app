@@ -1,5 +1,5 @@
 {
-  "name": "clientapp",
+  "name": "clientpanel",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -25,13 +25,15 @@
     "angularfire2": "^5.0.0-rc.3",
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
-    "firebase": "^4.6.2",
+    "firebase": "^4.6.1",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
     "rxjs": "^5.4.2",
+    "tether": "^1.4.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.9",
+    "@angular/cli": "1.4.4",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
     "@types/jasmine": "~2.5.53",
